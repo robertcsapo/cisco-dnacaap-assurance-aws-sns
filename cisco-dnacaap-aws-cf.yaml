@@ -1,0 +1,325 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  EmailSubscriber:
+    Type: String
+    AllowedPattern: .+
+    Description: >-
+      What's the first subscribers email? (Only one. More can be added in the
+      AWS SNS Service Portal)
+Metadata:
+  'AWS::CloudFormation::Designer':
+    bdbd6f02-f496-476a-8177-61269b1fa3a6:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -160
+        'y': 90
+      z: 1
+      embeds: []
+    e551bd59-1c06-4b29-b87b-f3bc04ad3c25:
+      size:
+        width: 330
+        height: 240
+      position:
+        x: 80
+        'y': 110
+      z: 1
+      embeds:
+        - 9498b44d-683f-4f4c-82e2-41b57e07d348
+        - 52c1e2d0-cf7e-49b0-b269-fbb82c3b1085
+    9498b44d-683f-4f4c-82e2-41b57e07d348:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 110
+        'y': 170
+      z: 2
+      parent: e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+      embeds: []
+      iscontainedinside:
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+    52c1e2d0-cf7e-49b0-b269-fbb82c3b1085:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 230
+        'y': 170
+      z: 2
+      parent: e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+      embeds: []
+      iscontainedinside:
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+      dependson:
+        - 9498b44d-683f-4f4c-82e2-41b57e07d348
+    e3de2aeb-a71c-48a6-8115-9020e1a2ba2a:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -160
+        'y': 190
+      z: 1
+      embeds: []
+      dependson:
+        - e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+        - bdbd6f02-f496-476a-8177-61269b1fa3a6
+    95d0cb3d-5e23-4da9-ae47-39c27193bded:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -60
+        'y': 10
+      z: 1
+      embeds: []
+    62fe7413-e987-44f0-9b67-32da079ab1bc:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 160
+        'y': 10
+      z: 1
+      embeds: []
+      dependson:
+        - bdbd6f02-f496-476a-8177-61269b1fa3a6
+        - 95d0cb3d-5e23-4da9-ae47-39c27193bded
+    c1bd7af2-9a4c-428c-991e-96d923b58f3b:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -10
+        'y': 300
+      z: 1
+      embeds: []
+    c3e1fe72-b120-4285-aef3-79047abf72db:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -160
+        'y': 300
+      z: 1
+      embeds: []
+      dependson:
+        - c1bd7af2-9a4c-428c-991e-96d923b58f3b
+    ff947cc5-eccb-4357-9bee-46013782c40e:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -240
+        'y': 150
+      z: 1
+      embeds: []
+Resources:
+  lambdaFunction:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: !Sub 'cisco-dnacaap-aws-lambda-${AWS::Region}'
+      Description: Receive JSON payload from Cisco DNA Center
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.7
+      Code:
+        S3Bucket: !Sub 'cisco-dnacaap-aws-s3-${AWS::Region}'
+        S3Key: cisco-dnacaap-aws-lambda.zip
+      MemorySize: 128
+      Timeout: 3
+      Role: !GetAtt lambdaIAMRole.Arn
+      Environment:
+        Variables:
+          S3BUCKET: !Ref s3Bucket
+          SNSARN: !Ref snsTopic
+          SNSTOPIC: !GetAtt
+            - snsTopic
+            - TopicName
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: bdbd6f02-f496-476a-8177-61269b1fa3a6
+    DependsOn:
+      - snsTopic
+      - s3Bucket
+  lambdaIAMRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+      Policies:
+        - PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Action:
+                  - 'sns:Publish'
+                Effect: Allow
+                Resource: !Ref snsTopic
+              - Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Effect: Allow
+                Resource:
+                  - !Sub >-
+                    arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:cisco-dnacaap-aws-lambda-${AWS::Region}:*
+          PolicyName: lambda
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ff947cc5-eccb-4357-9bee-46013782c40e
+    DependsOn:
+      - snsTopic
+  apiGateway:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: !Sub 'cisco-dnacaap-aws-apigw-${AWS::Region}'
+      Description: Cisco DNA Center Lambda API Gateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e551bd59-1c06-4b29-b87b-f3bc04ad3c25
+  apiGatewayRootMethod:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: POST
+      Integration:
+        IntegrationHttpMethod: POST
+        Type: AWS_PROXY
+        Uri: !Sub
+          - >-
+            arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${lambdaArn}/invocations
+          - lambdaArn: !GetAtt
+              - lambdaFunction
+              - Arn
+      ResourceId: !GetAtt
+        - apiGateway
+        - RootResourceId
+      RestApiId: !Ref apiGateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 9498b44d-683f-4f4c-82e2-41b57e07d348
+  apiGatewayDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    DependsOn:
+      - apiGatewayRootMethod
+    Properties:
+      RestApiId: !Ref apiGateway
+      StageName: default
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 52c1e2d0-cf7e-49b0-b269-fbb82c3b1085
+  lambdaAttachApiGateway:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt
+        - lambdaFunction
+        - Arn
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub >-
+        arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${apiGateway}/*/POST/
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e3de2aeb-a71c-48a6-8115-9020e1a2ba2a
+    DependsOn:
+      - lambdaFunction
+      - apiGateway
+  s3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Sub 'cisco-dnacaap-aws-lambda-s3-${AWS::Region}'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          - Id: purge
+            Prefix: ''
+            Status: Enabled
+            ExpirationInDays: '30'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c1bd7af2-9a4c-428c-991e-96d923b58f3b
+  s3BucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: !Ref s3Bucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !GetAtt lambdaIAMRole.Arn
+            Action:
+              - 's3:PutObject'
+              - 's3:PutObjectAcl'
+            Resource: !Sub 'arn:aws:s3:::cisco-dnacaap-aws-lambda-s3-${AWS::Region}/*'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c3e1fe72-b120-4285-aef3-79047abf72db
+    DependsOn:
+      - s3Bucket
+  snsTopic:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      TopicName: !Sub 'cisco-dnacaap-aws-sns-${AWS::Region}'
+      DisplayName: Cisco DNA Center Assurance Notification
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 95d0cb3d-5e23-4da9-ae47-39c27193bded
+  snsEmailSubscriber:
+    Type: 'AWS::SNS::Subscription'
+    Properties:
+      Endpoint: !Ref EmailSubscriber
+      Protocol: email
+      TopicArn: !Ref snsTopic
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 62fe7413-e987-44f0-9b67-32da079ab1bc
+    DependsOn:
+      - snsTopic
+      - lambdaFunction

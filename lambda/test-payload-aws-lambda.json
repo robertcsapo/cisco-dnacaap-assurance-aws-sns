@@ -1,0 +1,121 @@
+{
+  "resource": "/",
+  "path": "/",
+  "httpMethod": "POST",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Cache-Control": "no-cache",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "NL",
+    "Content-Type": "application/json",
+    "Host": "g4or28ymu0.execute-api.eu-central-1.amazonaws.com",
+    "Postman-Token": "7385c496-6c74-4498-bf63-1567f2c9ac2c",
+    "User-Agent": "PostmanRuntime/7.15.2",
+    "Via": "1.1 f31086fa351552c6b3265043b382c53e.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "2TMRuTY9YWU3qQpvdQattzoYIsM5G4rXAw3OnVzpm7SCjtvoqn7EbA==",
+    "X-Amzn-Trace-Id": "Root=1-5d244634-34670efc6e8051bd4ba109a1",
+    "X-Forwarded-For": "173.38.220.54, 216.137.58.11",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "*/*"
+    ],
+    "Accept-Encoding": [
+      "gzip, deflate"
+    ],
+    "Cache-Control": [
+      "no-cache"
+    ],
+    "CloudFront-Forwarded-Proto": [
+      "https"
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      "true"
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      "false"
+    ],
+    "CloudFront-Viewer-Country": [
+      "NL"
+    ],
+    "Content-Type": [
+      "application/json"
+    ],
+    "Host": [
+      "g4or28ymu0.execute-api.eu-central-1.amazonaws.com"
+    ],
+    "Postman-Token": [
+      "7385c496-6c74-4498-bf63-1567f2c9ac2c"
+    ],
+    "User-Agent": [
+      "PostmanRuntime/7.15.2"
+    ],
+    "Via": [
+      "1.1 f31086fa351552c6b3265043b382c53e.cloudfront.net (CloudFront)"
+    ],
+    "X-Amz-Cf-Id": [
+      "2TMRuTY9YWU3qQpvdQattzoYIsM5G4rXAw3OnVzpm7SCjtvoqn7EbA=="
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-5d244634-34670efc6e8051bd4ba109a1"
+    ],
+    "X-Forwarded-For": [
+      "173.38.220.54, 216.137.58.11"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "xh87od6tlj",
+    "resourcePath": "/",
+    "httpMethod": "POST",
+    "extendedRequestId": "ci_oIHFKliAFv7A=",
+    "requestTime": "09/Jul/2019:07:45:56 +0000",
+    "path": "/default/",
+    "accountId": "249867466039",
+    "protocol": "HTTP/1.1",
+    "stage": "default",
+    "domainPrefix": "g4or28ymu0",
+    "requestTimeEpoch": 1562658356001,
+    "requestId": "95a6d287-a21d-11e9-8373-cb15f5727f68",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "173.38.220.54",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "PostmanRuntime/7.15.2",
+      "user": null
+    },
+    "domainName": "g4or28ymu0.execute-api.eu-central-1.amazonaws.com",
+    "apiId": "g4or28ymu0"
+  },
+  "body": "{\n\t\"id\": \"AWZJw6y7OyE4MOPs83V-\",\n\t\"instanceId\": \"E-NETWORK-EVENT-AWZJw6y7OyE4MOPs83V--1538835787576\",\n\t\"category\": \"Warn\",\n\t\"status\": \"NEW\",\n\t\"timestamp\": 1538835787576,\n\t\"severity\": \"P1\",\n\t\"domain\": \"Availability\",\n\t\"source\": \"DNAC\",\n\t\"priority\": \"P1\",\n\t\"type\": \"Network\",\n\t\"title\": \"Device unreachable\",\n\t\"description\": \"This network device {network_device} is unreachable from controller. The device role is {fabricOrDeviceRole}.\",\n\t\"actualServiceId\": \"100.68.0.66\",\n\t\"assignedTo\": \"\",\n\t\"enrichmentInfo\": {\n\t\t\"issueDetails\": {\n\t\t\t\"issue\": [{\n\t\t\t\t\"issueId\": \"AWZJw6y7OyE4MOPs83V-\",\n\t\t\t\t\"issueSource\": \"Cisco DNA\",\n\t\t\t\t\"issueCategory\": \"Availability\",\n\t\t\t\t\"issueName\": \"snmp_device_down\",\n\t\t\t\t\"issueDescription\": \"This network device {network_device} is unreachable from controller. The device role is {fabricOrDeviceRole}.\",\n\t\t\t\t\"issueEntity\": \"network_device\",\n\t\t\t\t\"issueEntityValue\": \"100.68.0.66\",\n\t\t\t\t\"issueSeverity\": \"HIGH\",\n\t\t\t\t\"issuePriority\": \"\",\n\t\t\t\t\"issueSummary\": \"Network Device 100.68.0.66 Is Unreachable From Controller\",\n\t\t\t\t\"issueTimestamp\": 1538835787576,\n\t\t\t\t\"suggestedActions\": [{\n\t\t\t\t\t\"message\": \"From the controller, verify whether the last hop is reachable.\",\n\t\t\t\t\t\"steps\": []\n\t\t\t\t}, {\n\t\t\t\t\t\"message\": \"Verify that the physical port(s) on the network device associated with the network device discovery(IP) is UP.\",\n\t\t\t\t\t\"steps\": []\n\t\t\t\t}, {\n\t\t\t\t\t\"message\": \"Verify access to the device.\",\n\t\t\t\t\t\"steps\": []\n\t\t\t\t}],\n\t\t\t\t\"impactedHosts\": [{\n\t\t\t\t\t\"hostName\": \"Unknown\",\n\t\t\t\t\t\"hostOs\": \"Unknown\",\n\t\t\t\t\t\"ssid\": \"Unknown\",\n\t\t\t\t\t\"connectedInterface\": \"Unknown\",\n\t\t\t\t\t\"macAddress\": \"100.67.0.35\",\n\t\t\t\t\t\"failedAttempts\": 3,\n\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\"siteId\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"siteType\": \"BUILDING\",\n\t\t\t\t\t\t\"area\": \"Global\",\n\t\t\t\t\t\t\"building\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"apsImpacted\": []\n\t\t\t\t\t},\n\t\t\t\t\t\"timestamp\": 1538835787576\n\t\t\t\t}, {\n\t\t\t\t\t\"hostName\": \"Unknown\",\n\t\t\t\t\t\"hostOs\": \"Unknown\",\n\t\t\t\t\t\"ssid\": \"Unknown\",\n\t\t\t\t\t\"connectedInterface\": \"Unknown\",\n\t\t\t\t\t\"macAddress\": \"100.69.0.68\",\n\t\t\t\t\t\"failedAttempts\": 3,\n\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\"siteId\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"siteType\": \"BUILDING\",\n\t\t\t\t\t\t\"area\": \"Global\",\n\t\t\t\t\t\t\"building\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"apsImpacted\": []\n\t\t\t\t\t},\n\t\t\t\t\t\"timestamp\": 1538835787576\n\t\t\t\t}, {\n\t\t\t\t\t\"hostName\": \"Unknown\",\n\t\t\t\t\t\"hostOs\": \"Unknown\",\n\t\t\t\t\t\"ssid\": \"Unknown\",\n\t\t\t\t\t\"connectedInterface\": \"Unknown\",\n\t\t\t\t\t\"macAddress\": \"100.68.0.66\",\n\t\t\t\t\t\"failedAttempts\": 3,\n\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\"siteId\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"siteType\": \"BUILDING\",\n\t\t\t\t\t\t\"area\": \"Global\",\n\t\t\t\t\t\t\"building\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"apsImpacted\": []\n\t\t\t\t\t},\n\t\t\t\t\t\"timestamp\": 1538835787576\n\t\t\t\t}, {\n\t\t\t\t\t\"hostName\": \"Unknown\",\n\t\t\t\t\t\"hostOs\": \"Unknown\",\n\t\t\t\t\t\"ssid\": \"Unknown\",\n\t\t\t\t\t\"connectedInterface\": \"Unknown\",\n\t\t\t\t\t\"macAddress\": \"100.68.0.67\",\n\t\t\t\t\t\"failedAttempts\": 3,\n\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\"siteId\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"siteType\": \"BUILDING\",\n\t\t\t\t\t\t\"area\": \"Global\",\n\t\t\t\t\t\t\"building\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"apsImpacted\": []\n\t\t\t\t\t},\n\t\t\t\t\t\"timestamp\": 1538835787576\n\t\t\t\t}, {\n\t\t\t\t\t\"hostName\": \"Unknown\",\n\t\t\t\t\t\"hostOs\": \"Unknown\",\n\t\t\t\t\t\"ssid\": \"Unknown\",\n\t\t\t\t\t\"connectedInterface\": \"Unknown\",\n\t\t\t\t\t\"macAddress\": \"100.66.10.35\",\n\t\t\t\t\t\"failedAttempts\": 3,\n\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\"siteId\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"siteType\": \"BUILDING\",\n\t\t\t\t\t\t\"area\": \"Global\",\n\t\t\t\t\t\t\"building\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"apsImpacted\": []\n\t\t\t\t\t},\n\t\t\t\t\t\"timestamp\": 1538835787576\n\t\t\t\t}, {\n\t\t\t\t\t\"hostName\": \"Unknown\",\n\t\t\t\t\t\"hostOs\": \"Unknown\",\n\t\t\t\t\t\"ssid\": \"Unknown\",\n\t\t\t\t\t\"connectedInterface\": \"Unknown\",\n\t\t\t\t\t\"macAddress\": \"100.65.253.18\",\n\t\t\t\t\t\"failedAttempts\": 3,\n\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\"siteId\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"siteType\": \"BUILDING\",\n\t\t\t\t\t\t\"area\": \"Global\",\n\t\t\t\t\t\t\"building\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"apsImpacted\": []\n\t\t\t\t\t},\n\t\t\t\t\t\"timestamp\": 1538835787576\n\t\t\t\t}, {\n\t\t\t\t\t\"hostName\": \"Unknown\",\n\t\t\t\t\t\"hostOs\": \"Unknown\",\n\t\t\t\t\t\"ssid\": \"Unknown\",\n\t\t\t\t\t\"connectedInterface\": \"Unknown\",\n\t\t\t\t\t\"macAddress\": \"100.67.0.34\",\n\t\t\t\t\t\"failedAttempts\": 3,\n\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\"siteId\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"siteType\": \"BUILDING\",\n\t\t\t\t\t\t\"area\": \"Global\",\n\t\t\t\t\t\t\"building\": \"UNASSIGNED\",\n\t\t\t\t\t\t\"apsImpacted\": []\n\t\t\t\t\t},\n\t\t\t\t\t\"timestamp\": 1538835787576\n\t\t\t\t}]\n\t\t\t}]\n\t\t},\n\t\t\"connectedDevice\": [{\n\t\t\t\"deviceDetails\": {\n\t\t\t\t\"cisco360view\": \"https://100.65.1.10/dna/assurance/home#networkDevice/undefined\"\n\t\t\t}\n\t\t}]\n\t}\n}",
+  "isBase64Encoded": false
+}
