@@ -4,6 +4,8 @@ The Subscribers on AWS SNS can be Email, SMS, HTTPS or other AWS Services.
 
 In this solution we'll focus on Email and SMS (optional) subscription of AWS SNS.
 ## Screenshot
+### Quick Deployment Demo
+![aws-demo](./img/cisco-dnacaap-aws-cf-demo.gif)
 ### AWS Cloudformation Template
 ![aws-cf](./img/cisco-dnacaap-aws-cf.png)
 ### Emails
@@ -37,9 +39,19 @@ This will be created in your AWS Region
 - S3 Bucket
   - Storing JSON Payload from Cisco DNA-C for Archive purpose
 - SNS
-  - Delivering the Notifications from Cisco DNA-C to Subscribers
+  - Delivering the Notifications from Cisco DNA-C (AWS Lambda) to Subscribers
 
-### Deploying with Cloudformation Template
+### Deploying with Cloudformation Template (AWS CLI)
+
+- Download github repo or **cisco-dnacaap-aws-cf.yaml**
+- Run AWS CLI on your terminal
+  - ```aws cloudformation deploy --template-file ./cisco-dnacaap-aws-cf.yaml --capabilities CAPABILITY_IAM --stack-name cisco-dnacaap-aws-notifications --parameter-overrides EmailSubscriber=your@email.tld --region us-west-2```
+- Now Navigate to your **AWS Lambda**
+- Your function is called **cisco-dnacaap-aws-lambda-$AWS-REGION**
+- Click on your **API Gateway**
+  - **API endpoint** - Here is your **AWS Lambda API Gateway URL** (see section in Cisco DNA Center Config)
+
+### Deploying with Cloudformation Template (GUI)
 
 - Download github repo or **cisco-dnacaap-aws-cf.yaml**
 - Navigate to Cloudformation on your AWS Console
