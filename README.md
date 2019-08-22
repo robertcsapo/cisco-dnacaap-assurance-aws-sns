@@ -1,4 +1,6 @@
-# Cisco DNA Center Assurance Notifications to AWS SNS (email/sms)
+# Cisco DNA Center Assurance Notifications to AWS SNS (email/sms)  
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/robertcsapo/cisco-dnacaap-assurance-aws-sns)![Website](https://img.shields.io/website/https/cisco-dnacaap-aws-s3-us-east-1.s3.amazonaws.com/cisco-dnacaap-aws-lambda.zip?down_color=red&down_message=offline&label=AWS%20S3%20Code&up_color=blue&up_message=online)
+
 Forward events from Cisco DNA Center Platform API to Amazon Simple Notification Service (SNS).  
 The Subscribers on AWS SNS can be Email, SMS, HTTPS or other AWS Services.  
 https://aws.amazon.com/sns/faqs/
