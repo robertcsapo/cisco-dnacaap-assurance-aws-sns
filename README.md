@@ -1,16 +1,21 @@
 # Cisco DNA Center Assurance Notifications to AWS SNS (email/sms)
-Forward events from Cisco DNA Center Platform API to Amazon Simple Notification Service (SNS)
-The Subscribers on AWS SNS can be Email, SMS, HTTPS or other AWS Services.
+Forward events from Cisco DNA Center Platform API to Amazon Simple Notification Service (SNS).  
+The Subscribers on AWS SNS can be Email, SMS, HTTPS or other AWS Services.  
+https://aws.amazon.com/sns/faqs/
 
 In this solution we'll focus on Email and SMS (optional) subscription of AWS SNS.
+
 ## Screenshot
+
 ### Quick Deployment Demo
 ![aws-demo](./img/cisco-dnacaap-aws-cf-demo.gif)
 ### AWS Cloudformation Template
 ![aws-cf](./img/cisco-dnacaap-aws-cf.png)
 ### Emails
+_(Cisco DNA Center Issues sent as Email)_  
 ![aws-email](./img/cisco-dnacaap-aws-emails.png)
 ### SMS
+_(Cisco DNA Center Issues sent as SMS)_  
 ![aws-sms](./img/cisco-dnacaap-aws-sms.jpg)
 
 ## Requirements
@@ -26,7 +31,7 @@ In this solution we'll focus on Email and SMS (optional) subscription of AWS SNS
 
 ## TLDR (too long; didn't read) - Deployment
 
-AWS CloudFormation  
+### AWS CloudFormation  
 Supported Regions: **us-east-1,	us-west-2, ap-northeast-1, ap-southeast-1, ap-southeast-2, eu-north-1, eu-central-1, eu-west-1**  
 (If more is needed, please raise an issue)
 AWS SNS SMS Support: https://docs.aws.amazon.com/sns/latest/dg/sms_supported-countries.html
@@ -79,7 +84,7 @@ If you want to add more members then go to AWS SNS and choose **cisco-dnacaap-aw
 
 ![aws-lambda](./img/cisco-dnacaap-aws-lambda.png)
 
-### Configuring Cisco DNA Center
+### Configuring Cisco DNA Center (GUI)
 If you can't see the "Platform" tab on the top, then go to **Systems Settings** -> **Software Updates** -> **Installed Apps** to install "DNAC Platform"
 
 - Click on **Bundles**
@@ -104,7 +109,7 @@ If you can't see the "Platform" tab on the top, then go to **Systems Settings** 
 ## Technologies & Frameworks Used
 * Python3
 * AWS
-  - Lambda
+  - Lambda (Python)
   - SNS
   - S3
 * Cisco DNA Center Platform API
