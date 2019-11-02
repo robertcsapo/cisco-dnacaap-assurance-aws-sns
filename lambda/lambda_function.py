@@ -21,11 +21,15 @@ def lambda_handler(event, context):
             'body': json.dumps("Error - Can't load JSON from Body in the Payload")
         }
 
+    ''' Validate the data from Cisco DNA Center '''
     try:
-        data["title"]
-        data["actualServiceId"]
-        data["enrichmentInfo"]["issueDetails"]["issue"]
-        data["enrichmentInfo"]["connectedDevice"]
+        data["domain"]
+        data["details"]
+        data["details"]["Type"]
+        data["details"]["Assurance Issue Priority"]
+        data["details"]["Device"]
+        data["details"]["Assurance Issue Name"]
+
     except Exception:
         ''' Save Invalid JSON data to S3 Bucket for Archive '''
         s3.put_object(Bucket=os.environ["S3BUCKET"], Key="Error-"+s3Filename, Body=(str(event)))
@@ -39,27 +43,15 @@ def lambda_handler(event, context):
     s3.put_object(Bucket=os.environ["S3BUCKET"], Key=s3Filename, Body=(bytes(json.dumps(event['body']).encode('UTF-8'))))
 
     ''' Amazon SNS Subject '''
-    Subject = ("%s - %s") % (data["title"], data["actualServiceId"])
+    Subject = ("%s - %s - %s") % (data["domain"], data["details"]["Device"], data["details"]["Type"])
 
-    ''' Amazon SNS Message '''
-    for item in data["enrichmentInfo"]["issueDetails"]["issue"]:
-        issueSeverity = item["issueSeverity"]
-        issueSummary = item["issueSummary"]
+    ''' Amazon SNS Message - TODO Remove '''
+    data["details"]["Assurance Issue Priority"]
+    data["details"]["Device"]
+    data["details"]["Assurance Issue Name"]
+    data["ciscoDnaEventLink"]
 
-    link = "N/A"
-    for item in data["enrichmentInfo"]["connectedDevice"]:
-        if item is not None:
-            try:
-                link = item["deviceDetails"]["cisco360view"]
-                break
-            except Exception:
-                link = "N/A"
-    ''' TODO - when Cisco DNA-C sends proper direct links in Assurance '''
-    if link is not "N/A":
-        link = link.split("/")
-        link = ("https://%s/" % (link[2]))
-
-    Message = "Severity - %s\nTitle - %s\nSummary - %s\nLink - %s" % (issueSeverity, data["title"], issueSummary, link)
+    Message = "Severity - %s\nDevice - %s\nSummary - %s\nLink - %s" % (data["details"]["Assurance Issue Priority"], data["details"]["Device"], data["details"]["Assurance Issue Name"], data["ciscoDnaEventLink"])
 
     ''' Sending data to Amazon SNS Topic '''
     sns = boto3.client('sns')
@@ -76,5 +68,5 @@ def lambda_handler(event, context):
     ''' Return to Cisco DNA Center with Success '''
     return {
         'statusCode': 200,
-        'body': json.dumps("JSON Payload Received and Saved as %s and Sent to AWS SNS Topic %s" % (s3Filename, os.environ["SNSARN"]))
+        'body': json.dumps("JSON Payload Received - Saved as %s and Sent to AWS SNS Topic %s" % (s3Filename, os.environ["SNSARN"]))
     }
