@@ -89,24 +89,11 @@ If you want to add more members then go to AWS SNS and choose **cisco-dnacaap-aw
 ### Configuring Cisco DNA Center (GUI)
 If you can't see the "Platform" tab on the top, then go to **Systems Settings** -> **Software Updates** -> **Installed Apps** to install "DNAC Platform"
 
-- Click on **Bundles**
-- Enable **Network Events for REST API Endpoint**
-- Configure **Network Events for REST API Endpoint**
-  - Choose **Create a new instance**
-    - Set **Instance Name** (this can be changed if needed)
-    - **Description** could be that it's pointing to your AWS Lambda
-    - **REST End Point** points to your **AWS Lambda API Gateway URL** (see section in AWS deployment)
-    - **Username/Password** - choose anything (we don't validate this in AWS)
-- **"Success"** should be displayed and click on **"View Now"**
-  - This takes you to **Developer Toolkit** -> **Integration Flows**
-- Click on **Schedule to publish Network Events - REST Endpoint connector**
-  - Choose any **Repeats/Run At Interval**
-  - Click on **Resume** or **Schedule**
-- Click on **Manage** -> **Configurations** (in the top)
-  - **Event Settings**
-    - Verify that all items that you prefer is marked and click **Save** (bottom corner)
-
-![cisco-dnac](./img/cisco-dnacaap.png)
+* Enable Cisco DNA Center as a Platform
+	- How-To Guide https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/network-automation-and-management/dna-center-platform/1-3-1-0/user_guide/b_dnac_platform_ug_1_3_1_0/b_dnac_platform_ug_1_3_1_0_chapter_010.html
+* Configure Cisco DNA Center Events (https://<dnac-ip>/dna/systemSettings/settings?settings-item=dnacp-events-settings)
+	- How-To Guide https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/network-automation-and-management/dna-center-platform/1-3-1-0/user_guide/b_dnac_platform_ug_1_3_1_0/b_dnac_platform_ug_1_3_1_0_chapter_010.html
+	- Adam Radford's Blog https://blogs.cisco.com/developer/event-notifications-in-webex-teams
 
 ## Technologies & Frameworks Used
 * Python3
